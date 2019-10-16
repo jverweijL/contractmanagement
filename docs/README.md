@@ -1,34 +1,12 @@
-# Create workspace
-`blade init --base /liferay/development/liferay-workspaces  contractmanagement`
+This application will showcase how you can add your own custom application.
+It will demonstrate functionality like:
 
-# Create service
-`blade create --base /liferay/development/liferay-workspaces/contractmanagement -t service-builder -p com.liferay.cm contractmanagement`
+1. code generation (service builder)
+1. field validation (taglib)
+1. field components (clay taglib)
+1. control panel modification
+1. portlet
+1. json api generation
 
-# Create MVC Portlet
-`blade create --base /liferay/development/liferay-workspaces/contractmanagement/modules/contractmanagement -t mvc-portlet -p com.liferay.cm.web -c ContractmanagementPortlet contractmanagement-web`
-
-# Create Panel App
- `blade create --base /liferay/development/liferay-workspaces/contractmanagement/modules/contractmanagement -t panel-app -v 7.2 -p com.liferay.cm.panel -c ContractmanagmentStatusPanel contractmanagment-status-panel`
-
-# Run docker
-`docker run --name liferay_portal_v7.2 -v /tmp/docker:/etc/liferay/mount -it -p 8282:8080 liferay/portal:7.2.0-ga1`
-
-# Status
-1. draft
-1. waiting for approval
-1. approved
-1. rejected
-
-# Term
-1. Not Applicable
-1. 1 year contract
-2. 2 year contract
-3. 3 year contract
-
-# Type
-1. Non Disclosure Agreement
-1. General Contract
-1. Subscription Contract
-1. Vendor Contract
-
-Inspired by www.icertis.com
+Part of the application can be controlled within the site.
+Part of the application can be controlled with a portlet.
