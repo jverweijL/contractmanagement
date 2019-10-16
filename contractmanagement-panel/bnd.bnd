@@ -1,0 +1,4 @@
+Bundle-Name: contractmanagment-status-panel
+Bundle-SymbolicName: com.liferay.cm.panel
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.cm.panel.constants

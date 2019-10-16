@@ -1,0 +1,9 @@
+Bundle-Name: contractmanagement-web
+Bundle-SymbolicName: com.liferay.cm.web
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.cm.web.constants
+
+-metatype: *
+
+-liferay-aggregate-resource-bundles: \
+	com.liferay.cm.web.language

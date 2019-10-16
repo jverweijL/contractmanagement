@@ -1,0 +1,4 @@
+Bundle-Description: This provides a resource module which only holds language keys for re-use.
+Bundle-SymbolicName: com.liferay.cm.web.language
+Bundle-Version: 1.0.0
+-sources: true

@@ -1,0 +1,61 @@
+/*tasks.register("deploy-local") {
+    group = 'build'
+    doLast {
+        println 'Hello, World!'
+    }
+}*/
+
+task deployToLocalDocker(type: Copy) {
+    group = 'custom'
+
+    subprojects.each { dependsOn("${it.name}:jar") }
+    from('contractmanagement-api/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-service/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-language/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-web/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-panel/build/libs') {
+        include '**/*.jar'
+    }
+    into '/tmp/docker/deploy'
+}
+
+
+task collectForRemote(type: Copy) {
+    group = 'custom'
+
+    subprojects.each { dependsOn("${it.name}:jar") }
+    from('contractmanagement-api/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-service/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-language/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-web/build/libs') {
+        include '**/*.jar'
+    }
+    from('contractmanagement-panel/build/libs') {
+        include '**/*.jar'
+    }
+    into '/tmp/remote/deploy'
+
+}
+
+task collectAndZip(type: Zip) {
+    group = 'custom'
+    dependsOn 'collectForRemote'
+
+    from fileTree(dir: '/tmp/remote/deploy')
+    archiveName 'contractmanagement.zip'
+    destinationDir(file('/tmp/'))
+}

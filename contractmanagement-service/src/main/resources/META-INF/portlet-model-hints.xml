@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.cm.model.Contract">
+		<field name="uuid" type="String" />
+		<field name="contractId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifierId" type="long" />
+		<field name="modifierName" type="String" />
+		<field name="name" type="String" />
+		<field name="version" type="String" />
+		<field name="statusId" type="long" />
+		<field name="typeId" type="long" />
+		<field name="startdate" type="Date" />
+		<field name="reviewdate" type="Date" />
+		<field name="autoextend" type="boolean" />
+		<field name="termId" type="long" />
+		<field name="remarks" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+	</model>
+	<model name="com.liferay.cm.model.Status">
+		<field name="uuid" type="String" />
+		<field name="statusId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifierId" type="long" />
+		<field name="modifierName" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+	</model>
+	<model name="com.liferay.cm.model.Term">
+		<field name="uuid" type="String" />
+		<field name="termId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifierId" type="long" />
+		<field name="modifierName" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+	</model>
+	<model name="com.liferay.cm.model.Type">
+		<field name="uuid" type="String" />
+		<field name="typeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifierId" type="long" />
+		<field name="modifierName" type="String" />
+		<field name="name" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+	</model>
+</model-hints>

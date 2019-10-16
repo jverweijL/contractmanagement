@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.liferay.cm.service.impl.ContractLocalServiceImpl" id="com.liferay.cm.service.ContractLocalService" />
+	<bean class="com.liferay.cm.service.impl.ContractServiceImpl" id="com.liferay.cm.service.ContractService" />
+	<bean class="com.liferay.cm.service.persistence.impl.ContractPersistenceImpl" id="com.liferay.cm.service.persistence.ContractPersistence" />
+	<bean class="com.liferay.cm.service.impl.StatusLocalServiceImpl" id="com.liferay.cm.service.StatusLocalService" />
+	<bean class="com.liferay.cm.service.impl.StatusServiceImpl" id="com.liferay.cm.service.StatusService" />
+	<bean class="com.liferay.cm.service.persistence.impl.StatusPersistenceImpl" id="com.liferay.cm.service.persistence.StatusPersistence" />
+	<bean class="com.liferay.cm.service.impl.TermLocalServiceImpl" id="com.liferay.cm.service.TermLocalService" />
+	<bean class="com.liferay.cm.service.impl.TermServiceImpl" id="com.liferay.cm.service.TermService" />
+	<bean class="com.liferay.cm.service.persistence.impl.TermPersistenceImpl" id="com.liferay.cm.service.persistence.TermPersistence" />
+	<bean class="com.liferay.cm.service.impl.TypeLocalServiceImpl" id="com.liferay.cm.service.TypeLocalService" />
+	<bean class="com.liferay.cm.service.impl.TypeServiceImpl" id="com.liferay.cm.service.TypeService" />
+	<bean class="com.liferay.cm.service.persistence.impl.TypePersistenceImpl" id="com.liferay.cm.service.persistence.TypePersistence" />
+</beans>

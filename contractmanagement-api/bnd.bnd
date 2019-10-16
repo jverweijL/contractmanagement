@@ -1,0 +1,11 @@
+Bundle-Name: contractmanagement-api
+Bundle-SymbolicName: com.liferay.cm.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.cm.exception,\
+	com.liferay.cm.model,\
+	com.liferay.cm.service,\
+	com.liferay.cm.service.persistence,\
+	com.liferay.cm.service.permission
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../contractmanagement-service/service.xml

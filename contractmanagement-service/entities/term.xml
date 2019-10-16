@@ -1,0 +1,45 @@
+<service-builder package-path="com.liferay.cm"  dependency-injector="spring">
+    <entity local-service="true" name="Term" remote-service="true" uuid="true">
+        <!-- PK fields -->
+        <column name="termId" primary="true" type="long"/>
+        <!-- Group instance -->
+        <column name="groupId" type="long"/>
+        <!-- Audit fields -->
+        <column name="companyId" type="long"/>
+        <column name="userId" type="long"/>
+        <column name="userName" type="String"/>
+        <column name="createDate" type="Date"/>
+        <column name="modifiedDate" type="Date"/>
+        <column name="modifierId" type="long"/>
+        <column name="modifierName" type="String"/>
+
+        <!-- Other fields -->
+        <column name="name" type="String"/>
+        <column name="description" type="String"/>
+
+        <!-- sorters -->
+        <order by="desc">
+            <order-column name="modifiedDate" order-by="desc" />
+        </order>
+        <order by="asc">
+            <order-column name="termId" order-by="asc" />
+        </order>
+
+        <!-- finders -->
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"/>
+        </finder>
+
+        <finder name="G_T" return-type="Collection">
+            <finder-column name="groupId"/>
+            <finder-column name="termId"/>
+        </finder>
+
+        <reference entity="AssetEntry" package-path="com.liferay.portlet.asset"/>
+        <reference entity="AssetTag" package-path="com.liferay.portlet.asset"/>
+        <!--
+        <reference entity="Group" package-path="com.liferay.portal"/>
+        <reference entity="WorkflowInstanceLink" package-path="com.liferay.portal" />
+        -->
+    </entity>
+</service-builder>
