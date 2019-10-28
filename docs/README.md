@@ -1,3 +1,5 @@
+Build for Liferay 7.2 / Liferay DXP
+
 This application will showcase how you can add your own custom application.
 It will demonstrate functionality like:
 

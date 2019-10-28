@@ -12,4 +12,6 @@ dependencies {
 	compileOnly group: 'com.liferay', name: 'com.liferay.frontend.taglib.clay', version: '2.0.0'
 
 
+	
+
 }
